@@ -2,6 +2,7 @@ from openai import OpenAI
 import os
 import requests
 from dotenv import load_dotenv
+from IPython.display import display, HTML
 
 load_dotenv()
 AMAP_API_KEY = os.getenv("AMAP_API_KEY")
@@ -40,6 +41,7 @@ while True:
     messages.append({"role": "assistant", "content": reply})
 
     print(f"Assistant: {reply}\n")
+   
 # def chat(prompt):
 #     #1.把用户的新问题加入历史
 #     messages.append({"role": "user", "content": prompt})
