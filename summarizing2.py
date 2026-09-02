@@ -6,11 +6,11 @@ from IPython.display import display, HTML
 
 #加载环境变量
 load_dotenv()
-AMAP_API_KEY = os.getenv("AMAP_API_KEY")
-if not AMAP_API_KEY:
-    raise ValueError("AMAP_API_KEY is not set in the environment variables.")
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+if not DEEPSEEK_API_KEY:
+    raise ValueError("DEEPSEEK_API_KEY is not set in the environment variables.")
 client = OpenAI(
-    api_key=os.getenv("AMAP_API_KEY"),
+    api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com/v1"   # ← 关键：指向 DeepSeek
 )
 def get_completion(prompt, model="deepseek-chat"): 
