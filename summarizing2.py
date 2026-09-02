@@ -4,6 +4,7 @@ import requests
 from dotenv import load_dotenv
 from IPython.display import display, HTML
 
+#加载环境变量
 load_dotenv()
 AMAP_API_KEY = os.getenv("AMAP_API_KEY")
 if not AMAP_API_KEY:
